@@ -9,7 +9,6 @@
 # All rights reserved.
 
  __all__ = ["Config", "get_version"]
-# __all__ = ["Config"]
 
 
 import os
@@ -126,29 +125,28 @@ class Config:
     CHECK_MEDIA = os.environ.get("CHECK_MEDIA")
     BIO_STT = "t.me/biorange/40"
 
-# def get_version() -> str:
-#     """Obtenha a versão do Orange"""
-#     ver = f"{versions.__major__}.{versions.__minor__}.{versions.__micro__}"
-#     if Config.HEROKU_ENV:
-#        if not hasattr(Config, "HBOT_VERSION"):
-#           setattr(Config, "HBOT_VERSION", hbot_version(ver))
-#         return Config.HBOT_VERSION
-#     try:
-#         if "/code-rgb/userge-x" in Config.UPSTREAM_REPO.lower():
-#             diff = list(_REPO.iter_commits(f"v{ver}..HEAD"))
-#             if diff:
-#                 ver = f"{ver}|VULCAN.{len(diff)}"
-#       else:
-#            diff = list(_REPO.iter_commits(f"{Config.UPSTREAM_REMOTE}/alpha..HEAD"))
-#             if diff:
-#                 ver = f"{ver}|fork-[X].{len(diff)}"
-#        branch = f"@{_REPO.active_branch.name}"
-#     except Exception as err:
-#         _LOG.error(err)
-#    else:
-#        ver += branch
-#     return ver
-
+ def get_version() -> str:
+     """Obtenha a versão do Orange"""
+     ver = f"{versions.__major__}.{versions.__minor__}.{versions.__micro__}"
+     if Config.HEROKU_ENV:
+        if not hasattr(Config, "HBOT_VERSION"):
+          setattr(Config, "HBOT_VERSION", hbot_version(ver))
+         return Config.HBOT_VERSION
+     try:
+         if "/code-rgb/userge-x" in Config.UPSTREAM_REPO.lower():
+             diff = list(_REPO.iter_commits(f"v{ver}..HEAD"))
+             if diff:
+                 ver = f"{ver}|VULCAN.{len(diff)}"
+       else:
+            diff = list(_REPO.iter_commits(f"{Config.UPSTREAM_REMOTE}/alpha..HEAD"))
+             if diff:
+                 ver = f"{ver}|fork-[X].{len(diff)}"
+        branch = f"@{_REPO.active_branch.name}"
+     except Exception as err:
+         _LOG.error(err)
+    else:
+        ver += branch
+     return ver
 
 def hbot_version(tag: str) -> str:
     tag_name, commits, branch = None, None, None
