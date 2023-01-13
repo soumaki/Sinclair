@@ -132,7 +132,7 @@ class Config:
 
 
 #
- def >() -> str:
+def get_version() -> str:
     """Obtenha a versão do Orange"""
     ver = f"{versions.__major__}.{versions.__minor__}.{versions.__micro__}"
     if Config.HEROKU_ENV:
