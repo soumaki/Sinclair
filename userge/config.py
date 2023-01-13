@@ -19,7 +19,7 @@ from typing import Set
 # import heroku3
 from git import Repo
 import heroku3
-# from git import Repo
+from git import Repo
 
 from pyrogram import filters
 from requests import Session
@@ -32,7 +32,7 @@ GRepo_regex = comp_regex(
     "http[s]?://github\.com/(?P<owner>[-\w.]+)/(?P<repo>[-\w.]+)(?:\.git)?"
 )
 
-# _REPO = Repo()
+_REPO = Repo()
 _LOG = logging.getLogger(__name__)
 logbot.reply_last_msg("Definindo Configurações ...")
 
@@ -128,10 +128,6 @@ class Config:
     CHECK_MEDIA = os.environ.get("CHECK_MEDIA")
     BIO_STT = "t.me/biorange/40"
 
-# TIREI ESSA
-
-
-#
 def get_version() -> str:
     """Obtenha a versão do Orange"""
     ver = f"{versions.__major__}.{versions.__minor__}.{versions.__micro__}"
@@ -154,9 +150,6 @@ def get_version() -> str:
    else:
        ver += branch
     return ver
-
-
-# TIREI ESSA
 
 
 def hbot_version(tag: str) -> str:
