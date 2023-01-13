@@ -1,0 +1,13 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  # Necessário instalar as dependências primeiramente
+  - init: pip install -r ./requirements.txt
+    # Configure o config.env
+    command: >
+      if [[ -f config.env ]]; then
+        bash run
+      else
+        echo "Edite o arquivo config.env.exemplo e renomeie para 'config.env'. Após, rode o -> bash run"
+      fi
