@@ -8,8 +8,8 @@
 #
 # All rights reserved.
 
-# __all__ = ["Config", "get_version"]
- __all__ = ["Config"]
+ __all__ = ["Config", "get_version"]
+# __all__ = ["Config"]
 
 
 import os
