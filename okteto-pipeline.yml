@@ -6,13 +6,8 @@ services:
       HU_STRING_SESSION: $HU_STRING_SESSION
       REDIS_PASSWORD: $REDIS_PASSWORD
       SESSION: $SESSION
-      API_ID: $API_ID
-      API_HASH: $API_HASH
       LOG_CHANNEL_ID: $LOG_CHANNEL_ID
       FBAN_LOG_CHANNEL: $FBAN_LOG_CHANNEL
-      PM_LOG_GROUP_ID: $PM_LOG_GROUP_ID
-      BOT_MEDIA: $BOT_MEDIA
-      ALIVE_MEDIA: $ALIVE_MEDIA
       API_ID: $API_ID  # defaults to None
       API_HASH: $API_HASH  # defaults to None
       MONGO_URI: $MONGO_URI  # defaults to None
