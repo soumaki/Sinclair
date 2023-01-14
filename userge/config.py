@@ -125,7 +125,7 @@ class Config:
     CHECK_MEDIA = os.environ.get("CHECK_MEDIA")
     BIO_STT = "t.me/biorange/40"
 
- def get_version() -> str:
+def get_version() -> str:
      """Obtenha a versão do Orange"""
      ver = f"{versions.__major__}.{versions.__minor__}.{versions.__micro__}"
      if Config.HEROKU_ENV:
