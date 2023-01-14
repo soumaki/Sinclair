@@ -110,7 +110,7 @@ class UsergeBot(_AbstractUserge):
     """ Configurações do Bot """
     def __init__(self, **kwargs) -> None:
         _LOG.info(_LOG_STR, "Definindo Configurações")
-        super().__init__(session_name=":memory:", **kwargs)
+        super().__init__(**kwargs)#super().__init__(session_name=":memory:", **kwargs)
 
     @property
     def ubot(self) -> 'Userge':
