@@ -39,3 +39,9 @@ hachoir>=3.1.1
 vcsi
 gitdb>=4.0.1,<5
 typing-extensions>=3.7.4.3;python_version<"3.8"
+spamwatch
+youtube-search-python
+nekosbest
+google-api-python-client
+rarfile
+search-engine-parser
