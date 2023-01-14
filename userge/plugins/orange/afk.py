@@ -91,7 +91,7 @@ async def ausente(message: Message) -> None:
     & ~filters.me
     & ~filters.bot
     & ~filters.user(Config.TG_IDS)
-    & ~filters.edited
+    #& ~filters.edited
     & (
         filters.mentioned
         | (
