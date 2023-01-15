@@ -3,8 +3,9 @@ dnspython>=2.0.0
 gitpython>=3.1.11
 python-decouple
 python-dotenv
+program>=1.4.7
 pybase64>=1.1.1
-git+https://github.com/ashwinstr/pyrogram.git@x21
+# git+https://github.com/ashwinstr/pyrogram.git@x21
 pySmartDL>=1.3.4
 python-rapidjson>=1.4
 python-dotenv>=0.15.0
