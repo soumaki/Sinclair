@@ -59,11 +59,11 @@ async def pm_logger_(message: Message):
 @userge.on_message(
     filters.private
     & filters.incoming
-    & ~filters.me
+    & filters.me
     & ~filters.user(Config.TG_IDS)
     & ~filters.service
     & ~filters.bot
-    #& ~filters.edited
+    & ~filters.edited
     & ~allowAllFilter
     & allowPmLoggingFilter,
     group=2,
