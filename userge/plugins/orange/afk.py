@@ -91,7 +91,7 @@ async def ausente(message: Message) -> None:
     & ~filters.me
     & ~filters.bot
     & ~filters.user(Config.TG_IDS)
-    #& ~filters.edited
+    & ~filters.edited
     & (
         filters.mentioned
         | (
@@ -244,7 +244,7 @@ class _afk_:
     def afk_buttons() -> InlineKeyboardMarkup:
         buttons = [
 [InlineKeyboardButton(text="✅ STATUS", callback_data="status_afk"),
-             InlineKeyboardButton(text="⭕️ LESS.", url="https://t.me/LessContent"),
+             InlineKeyboardButton(text="⭕️ FM", url="https://t.me/MakiFMBot"),
              InlineKeyboardButton(text="👾", url=Config.BIO_STT),],]
         return InlineKeyboardMarkup(buttons)
 
