@@ -180,7 +180,7 @@ _server() {
 
 assertPrerequisites() {
     _checkBashReq
-    _checkPythonVersion
+#    _checkPythonVersion
     _installReq
     _checkConfigFile
     _checkRequiredVars
