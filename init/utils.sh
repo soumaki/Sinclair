@@ -9,7 +9,7 @@
 # All rights reserved.
 
 declare -r minPVer=8
-declare -r maxPVer=9
+declare -r maxPVer=10
 
 getPythonVersion() {
     local -i count=$minPVer
