@@ -147,26 +147,23 @@ if userge.has_bot:
     def check_owner(func):
         async def wrapper(_, c_q: CallbackQuery):
             if c_q.from_user and (
-                c_q.from_user.id
-                in Config.OWNER_ID
-                # or c_q.from_user.id in Config.SUDO_USERS
+                c_q.from_user.id in Config.OWNER_ID
+                or c_q.from_user.id in Config.TRUSTED_SUDO_USERS
             ):
                 await c_q.answer()
                 try:
                     await func(c_q)
                 except MessageNotModified:
-                    await c_q.answer(
-                        "Não encontrei nada para atualizar.", show_alert=True
-                    )
+                    await c_q.answer("Nothing Found to Refresh 🤷‍♂️", show_alert=True)
                 except MessageIdInvalid:
                     await c_q.answer(
-                        "Foi mal, não tenho permissões para editar isso.",
+                        "Sorry, I Don't Have Permissions to edit this 😔",
                         show_alert=True,
                     )
             else:
                 user_dict = await userge.bot.get_user_dict(Config.OWNER_ID[0])
                 await c_q.answer(
-                    f"Acesso concedido do AppleBot somente para {user_dict['flname']} ",
+                    f"Only {user_dict['flname']} Can Access this...! Build Your SinclairX",
                     show_alert=True,
                 )
 
@@ -493,7 +490,10 @@ if userge.has_bot:
         iq_user_id = inline_query.from_user.id
         if (
             (iq_user_id in Config.OWNER_ID)
-            or (iq_user_id in Config.SUDO_USERS)
+            or (
+                iq_user_id in Config.SUDO_USERS
+                or iq_user_id in Config.TRUSTED_SUDO_USERS
+            )
             and Config.SUDO_ENABLED
         ):
 
