@@ -168,6 +168,16 @@ _flushMessages() {
     deleteLastMessage
 }
 
+_server() {
+    if test $API_PORT ; then 
+        python3 -c "import asyncio;asyncio.run(asyncio.create_subprocess_shell('python3 server.py'))"
+        echo "API Started..."
+    else
+        echo "Skipping API..."
+    fi
+}
+
+
 assertPrerequisites() {
     _checkBashReq
     _checkPythonVersion
@@ -185,4 +195,5 @@ assertEnvironment() {
     _checkUnoffPlugins
     _checkCustomPlugins
     _flushMessages
+    _server
 }
