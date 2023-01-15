@@ -298,12 +298,12 @@ async def logs(message: Message) -> None:
     )
     await asyncio.gather(*coro_list)
 
-    # # # teste # # #
+    # # # Maki # # #
     @userge.bot.on_callback_query(filters.regex(pattern=r"^status_afk$"))
     async def status_afk_(_, c_q: CallbackQuery):
         c_q.from_user.id
         await c_q.answer(
-            f"👾 @iamakima 𝐒𝐓𝐀𝐓𝐔𝐒:\n\n𝐏𝐨𝐬𝐬í𝐯𝐞𝐢𝐬 𝐌𝐨𝐭𝐢𝐯𝐨𝐬:\n ╰• {random.choice(MOTIVOS)}\n\n🔗 𝐁𝐢𝐨: @biorange",
+            f"👾 @iamakima 𝐒𝐓𝐀𝐓𝐔𝐒:\n\n𝐏𝐨𝐬𝐬í𝐯𝐞𝐢𝐬 𝐌𝐨𝐭𝐢𝐯𝐨𝐬:\n ╰• {random.choice(MOTIVOS)}\n\n🔗 𝐁𝐢𝐨: @enibio",
             show_alert=True,
         )
         return status_afk_
@@ -312,7 +312,7 @@ async def logs(message: Message) -> None:
     async def _status_afk(_, c_q: CallbackQuery):
         c_q.from_user.id
         await c_q.answer(
-            f"🍎 @applled 𝐁𝐈𝐎/Projects:\nТак вам любопытно\n\nHi, human!\n{random.choice(BIO_AFK)}\n\n🔗 𝐁𝐢𝐨: @biorange",
+            f"🍎 @applled 𝐁𝐈𝐎/Projects:\nТак вам любопытно\n\nHi, human!\n{random.choice(BIO_AFK)}\n\n🔗 𝐁𝐢𝐨: @enidbio",
             show_alert=True,
         )
         return _status_afk
