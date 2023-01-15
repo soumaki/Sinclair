@@ -91,6 +91,7 @@ class Config:
     SUDO_ENABLED = False
     SUDO_USERS: Set[int] = set()
     DISABLED_ALL = False
+    TRUSTED_SUDO_USERS: Set[int] = set()
     DISABLED_CHATS: Set[int] = set()
     ALLOWED_COMMANDS: Set[str] = set()
     ANTISPAM_SENTRY = False
