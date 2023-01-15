@@ -45,3 +45,8 @@ nekosbest
 google-api-python-client
 rarfile
 search-engine-parser
+
+# Server
+
+fastapi>=0.88.0
+uvicorn>=0.20.0
