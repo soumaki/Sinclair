@@ -119,11 +119,11 @@ class Config:
     TG_IDS = [777000, 1087968824, 454000]
     INLINE_NOTES = False
     BOT_ANTIFLOOD = False
-    MEUTG_REPO = "t.me/applled"
-    BIO_APPLE = "t.me/biorange"
+    MEUTG_REPO = "t.me/iamakima"
+    BIO_APPLE = "t.me/enidbio"
     TAG_LOGGING = False
     CHECK_MEDIA = os.environ.get("CHECK_MEDIA")
-    BIO_STT = "t.me/biorange/40"
+    BIO_STT = "t.me/enidbio"
 
 def get_version() -> str:
     """Obtenha a versão do Orange"""
