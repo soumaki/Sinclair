@@ -125,6 +125,7 @@ class Config:
     TAG_LOGGING = False
     CHECK_MEDIA = os.environ.get("CHECK_MEDIA")
     BIO_STT = "t.me/enidbio"
+    DISABLED_TSUDO = filters.user([])
 
 def get_version() -> str:
     """Obtenha a versão do Orange"""
